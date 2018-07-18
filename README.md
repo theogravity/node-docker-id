@@ -10,10 +10,15 @@ Gets the docker container id / checks if the app is running in a docker containe
 
 ## API Usage
 
-Two methods are available
+Two methods are available:
 
-- `getContainerId` (async version)
-- `getContainerIdSync` (sync version)
+- `getContainerId` (async version - uses `fs.readFile`; does not throw anything at all in fail cases, just returns `null`)
+- `getContainerIdSync` (sync version - uses `fs.readFileSync`)
+
+You can wrap the result with `Boolean()` to turn it into a `true` / `false` value.
+
+- `Boolean(getContainerIdSync())`
+- `Boolean(await getContainerId())`
 
 Returns:
 
@@ -31,8 +36,13 @@ getContainerId.then((id) => {
   console.log(id)
 })
 
+// ------
+
 // sync version
 const containerId = getContainerIdSync()
+
+// If you want to check if it is in docker or not
+const isDocker = Boolean(containerId)
 ```
 
 ## CLI usage
