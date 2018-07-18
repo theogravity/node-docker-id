@@ -1,4 +1,4 @@
-# [UNRELEASED]
+# 1.0.7 - Wed Jul 18 2018 03:23:43
 
 Consolidate tests.
 
