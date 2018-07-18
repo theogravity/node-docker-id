@@ -20,7 +20,7 @@ Returns:
 - `null` if the id cannot be found or the app is not running in docker
 - container id if it is found
 
-```
+```js
 import {
   getContainerId,
   getContainerIdSync
