@@ -1,11 +1,8 @@
 # node-docker-id
 
+[![npm version](https://badge.fury.io/js/docker-id.svg)](https://badge.fury.io/js/docker-id) [![CircleCI](https://circleci.com/gh/theogravity/node-docker-id.svg?style=svg)](https://circleci.com/gh/theogravity/node-docker-id)
+
 Gets the docker id.
-
-## Contents
-
-<!-- TOC -->
-<!-- TOC END -->
 
 ## Install
 
