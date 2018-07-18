@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/docker-id.svg)](https://badge.fury.io/js/docker-id) [![CircleCI](https://circleci.com/gh/theogravity/node-docker-id.svg?style=svg)](https://circleci.com/gh/theogravity/node-docker-id)
 
-Gets the docker container id / checks if the app is running in a docker container.
+Gets the docker container id / checks if the app is running in a docker container via CLI or API.
 
 ## Install
 
@@ -15,7 +15,10 @@ Two methods are available:
 - `getContainerId` (async version - uses `fs.readFile`; does not throw anything at all in fail cases, just returns `null`)
 - `getContainerIdSync` (sync version - uses `fs.readFileSync`)
 
-You can wrap the result with `Boolean()` to turn it into a `true` / `false` value.
+The result is cached; subsequent calls will not result in additional file reads.
+
+You can wrap the result with `Boolean()` to turn it into a `true` / `false` value. Useful if you want to just check
+that the app is in a container or not.
 
 - `Boolean(getContainerIdSync())`
 - `Boolean(await getContainerId())`
