@@ -1,4 +1,4 @@
-# [UNRELEASED]
+# 1.0.8 - Wed Jul 18 2018 06:24:23
 
 Update docs.
 
