@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/docker-id.svg)](https://badge.fury.io/js/docker-id) [![CircleCI](https://circleci.com/gh/theogravity/node-docker-id.svg?style=svg)](https://circleci.com/gh/theogravity/node-docker-id)
 
-Gets the docker id.
+Gets the docker container id / checks if the app is running in a docker container.
 
 ## Install
 

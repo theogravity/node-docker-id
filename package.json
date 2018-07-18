@@ -1,7 +1,7 @@
 {
   "name": "docker-id",
   "version": "1.0.4",
-  "description": "Get the Docker container id your app is running in via CLI or API",
+  "description": "Gets the docker container id / checks if the app is running in a docker container via CLI or API",
   "main": "lib/index.js",
   "bin": {
     "get-container-id": "lib/bin/get-container-id.js"
