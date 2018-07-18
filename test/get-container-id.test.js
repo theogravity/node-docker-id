@@ -1,6 +1,4 @@
-/* eslint-env mocha */
-
-import { expect } from 'chai'
+/* eslint-env jest */
 
 import getId from '../src/get-container-id'
 
@@ -8,7 +6,7 @@ const TEST_ID = '3601745b3bd54d9780436faa5f0e4f72bb46231663bb99a6bb892764917832c
 
 describe('get-container-id', () => {
   it('should return false on empty data', () => {
-    expect(getId()).to.equal(null)
+    expect(getId()).toBe(null)
   })
 
   it('should return false if the data does not contain the docker id', () => {
@@ -23,20 +21,20 @@ describe('get-container-id', () => {
 3:cpu:/
 2:cpuset:/`
 
-    expect(getId(data)).to.equal(null)
+    expect(getId(data)).toBe(null)
   })
 
   it('should return false if the data cannot be properly parsed', () => {
     const data = `abcd`
 
-    expect(getId(data)).to.equal(null)
+    expect(getId(data)).toBe(null)
   })
 
   it('should return false if the data cannot be properly parsed 2', () => {
     const data = `abcd
 efgh`
 
-    expect(getId(data)).to.equal(null)
+    expect(getId(data)).toBe(null)
   })
 
   it('should return the id if it is present in the data', () => {
@@ -51,7 +49,7 @@ efgh`
 3:cpu:/
 2:cpuset:/`
 
-    expect(getId(data)).to.equal(TEST_ID)
+    expect(getId(data)).toBe(TEST_ID)
   })
 
   it('should return the id if it is present in the data 2', () => {
@@ -66,6 +64,6 @@ efgh`
 3:cpu:/docker/${TEST_ID}
 2:cpuset:/docker/${TEST_ID}`
 
-    expect(getId(data)).to.equal(TEST_ID)
+    expect(getId(data)).toBe(TEST_ID)
   })
 })
